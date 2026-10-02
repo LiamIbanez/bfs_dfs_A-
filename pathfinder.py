@@ -3,9 +3,6 @@ from collections import deque
 import heapq
 import random
 
-# =========================
-# SETTINGS
-# =========================
 
 ROWS = 12
 COLS = 18
@@ -25,9 +22,7 @@ path_index = 0
 running = False
 
 
-# =========================
-# ALGORITHMS
-# =========================
+
 
 def get_neighbors(node):
     row, col = node
@@ -155,18 +150,14 @@ def astar():
     return order, make_path(parent)
 
 
-# =========================
-# WINDOW
-# =========================
+
 
 root = tk.Tk()
 root.title("BFS, DFS and A* Pathfinding Visualizer")
 root.configure(bg="#111827")
 
 
-# =========================
-# FUNCTIONS
-# =========================
+
 
 def reset_search():
     global visited, final_path
@@ -335,9 +326,7 @@ def click_grid(event):
     reset_search()
 
 
-# =========================
-# DRAW GRID
-# =========================
+
 
 def draw_grid():
 
@@ -403,9 +392,7 @@ def draw_grid():
     )
 
 
-# =========================
-# UI
-# =========================
+
 
 title = tk.Label(
     root,
